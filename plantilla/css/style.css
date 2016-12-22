@@ -1,0 +1,152 @@
+/**********************GLOBALES**************************/
+@font-face {
+    font-family: Ogirema;
+    src: url(../fonts/Ogirema.ttf);
+}
+
+@font-face {
+    font-family: OgiremaBold;
+    src: url(../fonts/OgiremaBold.ttf);
+}
+
+@font-face {
+    font-family: OgiremaItalic;
+    src: url(../fonts/OgiremaItalic.ttf);
+}
+
+#wrapper, body, #section-full{
+	width:100%;
+	margin: 0;
+	padding: 0;
+}
+
+.section-primary{
+	margin:0 auto;
+	width:1024px;
+	min-height: 100px;
+}
+
+h1, h2, h3, h4, h5, h6, span{
+	font-family: OgiremaBold;
+}
+
+h1{
+	font-size: 71px;
+}
+
+h2{
+	font-size: 53px;
+}
+
+.space-35{
+	height:25px;
+}
+
+/**********************HEADERT**************************/
+
+#header{
+	overflow: hidden;
+}
+
+#logo{
+    width: 340px;
+    text-align: center;
+    float: left;
+}
+
+#logo img{
+	margin-top: 30px;
+}
+
+#social-header{
+	width: 682px;
+    height: 150px;
+    float: right;
+}
+
+#social-header ul{
+	list-style: none;
+    padding: 0;
+    float: right;
+    margin-top: 40px;
+    margin-right: 25px;
+}
+
+#social-header ul li{
+	float: left;
+    margin-left: 6px;
+}
+
+#menu-principal{
+	width: 682px;
+    height: 60px;
+    float: right;
+    text-align: center;
+}
+
+#menu-principal ul{
+	width: 675px;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#menu-principal ul li{
+	float: left;
+	text-transform: uppercase;
+	margin-left: 12px;
+	margin-right: 12px;
+	font-family: OgiremaBold;
+	font-size:21px;
+	color:#249837;
+}
+
+.item-banner{
+	width: 100%;
+    height: 500px;
+    box-shadow: inset 0px 7px 19px #8c8c8c;
+    position: relative;
+}
+
+.texto-banner{
+	text-transform: uppercase;
+	text-shadow: 1px 7px 7px #131313;
+	color:#fff;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 175px;
+	background-color: rgba(255,255,255,0.15);
+}
+
+.texto-banner .texto{
+	width: 675px;
+    text-align: justify;
+}
+
+/**********************CONTENT**************************/
+.item-estadistica{
+}
+
+.item-estadistica h1{
+	color: rgba(71, 123, 47, 0.8);
+    text-shadow: 1px 4px 6px #def, 0 0 0 #000, 1px 4px 6px #def;
+}
+
+.item-estadistica span{
+	color:#487338;
+	font-size: 21px;
+	text-transform: uppercase;
+}
+
+.titulo{
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.titulo h1{
+	color: rgba(255, 255, 255, 0.8);
+    text-shadow: 1px 4px 6px #4a8130, 0 0 0 #000, 1px 4px 6px #4a8130;
+}
