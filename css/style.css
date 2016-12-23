@@ -22,7 +22,7 @@
 
 .section-primary{
 	margin:0 auto;
-	width:1024px;
+	max-width:1024px;
 	min-height: 50px;
 }
 
@@ -256,7 +256,7 @@ h5{
 	background-color: #fff;
 	z-index: 999;
     position: absolute;
-    width: 100%;
+    width: 100% !important;
     box-shadow: 0px 1px 12px grey;
 }
 
@@ -541,5 +541,43 @@ h5{
 }
 
 #mapa, #mapa-2{
-	height:950px;
+	height:500px;
+}
+
+/**********************RESPONSIVE**************************/
+
+@media (min-width: 768px) and (max-width: 1023px){
+	#logo{
+		position: absolute;
+    	margin: auto;
+    	width: 100%;
+	}
+
+	#logo img{
+		width:190px;
+	}
+
+	#menu-principal{
+		width: inherit;
+    	height: 60px;
+    	float: none;
+    	margin-top: 150px;
+	}
+
+}
+
+@media only screen and (max-width : 1023px) {
+	.diagonal-left, .diagonal-right{
+		clip-path:inherit;
+	}
+
+	.block-texto-nosotros, .block-image-nosotros{
+		width:100%;
+		float:none !important;
+	}
+
+	.section-primary{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
