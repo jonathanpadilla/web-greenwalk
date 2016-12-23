@@ -497,3 +497,32 @@ h5{
 	height:350px;
 	padding: 160px 0 0 0;
 }
+
+#social-footer ul{
+	list-style: none;
+	overflow: hidden;
+	margin-top: 50px;
+}
+
+#social-footer ul li{
+	float:left;
+	margin-right:15px;
+}
+
+#contacto-footer ul{
+	list-style: none;
+	margin-top: 30px;
+}
+
+#contacto-footer ul li{
+	margin-top:10px;
+}
+
+#contacto-footer ul li a{
+	color:#fff;
+	font-family: OgiremaBold;
+	font-size:24px;
+	text-shadow: 1px 1px 1px #000;
+	text-decoration: none;
+	vertical-align: bottom;
+}

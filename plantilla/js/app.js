@@ -13,6 +13,8 @@ $(function(){
 	 	$("#logo img").css('margin-top', '0');
 
 	 	$("#space-header").css('height', '200px');
+
+	 	$("#menu-principal ul").css('margin-top', '28px');
 	});
 
 	$('#bg-menu').on('sticky-end', function() {
@@ -26,6 +28,8 @@ $(function(){
 	 	$("#logo img").css('margin-top', '30px');
 
 	 	$("#space-header").css('height', '210px');
+
+	 	$("#menu-principal ul").css('margin-top', '10px');
 	});
 
 	/*hash menu*/
