@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>{% block title %}{% endblock %} | Greenwalk</title>
+
+        <link rel="stylesheet" href="{{ absolute_url( asset('css/normalize.css')) }}">
+        <link rel="stylesheet" href="{{ absolute_url( asset('css/bootstrap.min.css')) }}">
+        <link rel="stylesheet" href="{{ absolute_url( asset('js/owl-carousel/owl.carousel.css')) }}">
+        <link rel="stylesheet" href="{{ absolute_url( asset('js/owl-carousel/owl.theme.css')) }}">
+        <link rel="stylesheet" href="{{ absolute_url( asset('css/style.css')) }}">
+
+        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+        <script src="{{ path('fos_js_routing_js', { callback: 'fos.Router.setData' }) }}"></script>
+
+        {% if session %}
+        <link rel="stylesheet" href="{{ absolute_url(asset('css/admin.css')) }}">
+        {% endif %}
+
+        {% block css %}
+        {% endblock %}
+
+    </head>
+    <body>
+
+        {% if session %}
+        <div class="topbar_admin">
+            <div>
+                <a href="{{ url('web_logout') }}">Salir</a>
+            </div>
+        </div>
+        {% endif %}
+
+        {% block body %}
+        {% endblock %}
+    
+        <script src="{{ absolute_url( asset('js/jquery-3.1.1.min.js')) }}"></script>
+        <script src="{{ absolute_url( asset('js/bootstrap.min.js')) }}"></script>
+        <script src="{{ absolute_url( asset('js/owl-carousel/owl.carousel.js')) }}"></script>
+
+        {% if session %}
+        <script src="{{ absolute_url(asset('js/admin.js')) }}"></script>
+        {% endif %}
+
+        {% block js %}
+        {% endblock %}
+
+    </body>
+</html>

@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div id="wrapper">
+
+<div class="menu-mobil">
+  <input type="checkbox" id="menu" name="menu" class="menu-checkbox">
+  <div class="menu">
+    <label class="menu-toggle" for="menu"><span>Toggle</span></label>
+    <ul>
+      <li><a href="{{ url('web_inicio') }}" {{ activo == 'inicio' ? 'class="active"' }}>Inicio</a></li>
+      <li><a href="{{ url('web_empresa') }}" {{ activo == 'empresa' ? 'class="active"' }}>Empresa</a></li>
+      <li><a href="{{ url('web_servicios') }}" {{ activo == 'servicios' ? 'class="active"' }}>Servicios</a></li>
+      <li><a href="{{ url('web_galeria') }}" {{ activo == 'galeria' ? 'class="active"' }}>Galeria</a></li>
+      <li><a href="{{ url('web_contacto') }}" {{ activo == 'contacto' ? 'class="active"' }}>Contácto</a></li>
+    </ul>
+  </div>
+  
+</div>
+
+<div class="width-default">
+
+  <div id="header">
+
+    <div id="logo">
+      <img src="{{ absolute_url( asset('image/logo.png')) }}" alt="sisa">
+    </div>
+
+    <div id="content-menu">
+
+      <div id="header-social">
+        <ul>
+          <li><img src="{{ absolute_url( asset('image/fono.png')) }}" alt="fono"></li>
+          <li><img src="{{ absolute_url( asset('image/facebook.png')) }}" alt="facebook"></li>
+        </ul>
+      </div>
+
+      <div id="menu">
+        <ul>
+          <li><a href="{{ url('web_inicio') }}" {{ activo == 'inicio' ? 'class="active"' }}>Inicio</a></li>
+          <li><a href="{{ url('web_empresa') }}" {{ activo == 'empresa' ? 'class="active"' }}>Empresa</a></li>
+          <li><a href="{{ url('web_servicios') }}" {{ activo == 'servicios' ? 'class="active"' }}>Servicios</a></li>
+          <li><a href="{{ url('web_galeria') }}" {{ activo == 'galeria' ? 'class="active"' }}>Galeria</a></li>
+          <li><a href="{{ url('web_contacto') }}" {{ activo == 'contacto' ? 'class="active"' }}>Contácto</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<div class="width-full">
+
+  <div class="banner" style="background-image: url('{{ absolute_url( asset('image/banner1.jpg')) }}')">
+    <div class="content-banner">
+      <div class="titulo-banner">
+        <h2>Recargas de aire acondicionario electricidad automotriz - scanner</h2>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% block content %}
+{% endblock %}
+
+{% include 'WebBundle:Default:footer.html.twig' %}
+{% endblock %}

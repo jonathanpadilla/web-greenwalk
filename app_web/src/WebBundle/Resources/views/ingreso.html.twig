@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js" lang="es">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Sistema de administracion tuciudad.cl v1.0">
+		<meta name="author" content="www.tuciudad.cl">
+		<title>Ingreso Admin</title>
+		<link rel="shortcut icon" href="{{ absolute_url(asset('img/admin/key.png')) }}">
+		<link rel="stylesheet" href="{{ absolute_url(asset('css/login.css')) }}">
+		
+	</head>
+	<body>
+<div class="container">
+	<section id="content">
+		<form action="{{ url('web_login_check') }}" method="post">
+			<h1>SISA</h1>
+			<div>
+				<input type="text" placeholder="Usuario" name="usuario" required="" id="username" />
+			</div>
+			<div>
+				<input type="password" placeholder="Clave" name="clave" required="" id="password" />
+			</div>
+			<div>
+				<input type="submit" value="Entrar" />
+				<!-- <a href="#">Lost your password?</a>
+				<a href="#">Register</a> -->
+			</div>
+		</form><!-- form -->
+		<div class="button">
+			<a href="#">Volver a la página</a>
+			<!-- <a href="#">Download source file</a> -->
+		</div><!-- button -->
+	</section><!-- content -->
+</div><!-- container -->
+</body>
+	<!-- <body>
+		
+		<form class="form-4" action="{{ url('web_login_check') }}" method="post" id="form_login">
+			<div class="img-svg"><img src="{{ absolute_url(asset('image/user.svg')) }}" alt=""></div>
+		    <h1>Ingreso Administrador</h1>
+		    <div class="error">{{ error }}</div>
+		    <p>
+		        <label for="login">Nombre de usuario</label>
+		        <input type="text" name="usuario" placeholder="Nombre de usuario" required>
+		    </p>
+		    <p>
+		        <label for="password">Contraseña</label>
+		        <input type="password" name='clave' placeholder="Contraseña" required> 
+		    </p>
+
+		    <p>
+		        <input type="submit" name="submit" value="Entrar" id="btn_login">
+		    </p>
+		</form>
+	</body> -->
+</html>

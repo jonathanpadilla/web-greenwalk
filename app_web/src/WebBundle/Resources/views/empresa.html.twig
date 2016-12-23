@@ -1,0 +1,114 @@
+{% extends "WebBundle:Default:body.html.twig" %}
+
+{% block title %}
+Empresa | SISA
+{% endblock %}
+
+{% block content %}
+
+<div class="width-default">
+
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h3 class="txt-azul">Nuestra empresa</h3>
+          </div>
+        </div>
+        
+        <div class="space"></div>
+
+        <div class="row">
+          <div class="col-md-3 text-right text-center-sm">
+            <h3 class="txt-rojo">¿Necesitas mantención?</h3>
+          </div>
+          <div class="col-md-4 text-center-sm">
+            <img src="{{ absolute_url( asset('image/auto.png')) }}" alt="auto">
+          </div>
+          <div class="col-md-5 text-center-sm">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </div>
+
+        <div class="space"></div>
+
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <div class="circulo-imagen">
+              <img src="{{ absolute_url( asset('image/peso.png')) }}" alt="peso">
+            </div>
+            <div class="circulo-texto">
+              <h3>Distintos medios de pago</h3>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="circulo-imagen">
+              <img src="{{ absolute_url( asset('image/seguridad.png')) }}" alt="peso">
+            </div>
+            <div class="circulo-texto">
+              <h3>Seguridad y confianza</h3>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="circulo-imagen">
+              <img src="{{ absolute_url( asset('image/reparacion.png')) }}" alt="reparacion">
+            </div>
+            <div class="circulo-texto">
+              <h3>Reparación y mantención</h3>
+            </div>
+          </div>
+        </div>
+        
+        <div class="space"></div>
+
+        <div class="row">
+          <div class="col-md-6 text-center">
+            <div class="foto-empresa">
+              <img src="{{ absolute_url( asset('image/fotos/foto1.jpg')) }}" alt="foto 1">
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <div class="foto-empresa">
+              <img src="{{ absolute_url( asset('image/fotos/foto2.jpg')) }}" alt="foto 1">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="space"></div>
+
+          <div class="col-md-12 text-center">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.</p>
+          </div>
+
+        </div>
+
+        <div class="space"></div>
+
+      </div>
+
+      <div class="width-full">
+
+        <div class="banner" style="background-image: url('{{ absolute_url( asset('image/banner-empresa.jpg')) }}')">
+          <div class="content-banner">
+            <div class="titulo-banner2">
+              <h2>Seguridad para tu vehiculo</h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="banner">
+          <div class="imagen">
+            <div class="texto-banner2">
+              <div class="titulo-banner top-300">
+                <h2>Seguridad para tu vehiculo</h2>
+              </div>
+            </div>
+            <img src="{{ absolute_url( asset('image/banner-empresa.jpg')) }}" alt="">
+          </div>
+        </div> -->
+        
+      </div>
+
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

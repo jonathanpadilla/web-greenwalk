@@ -1,0 +1,25 @@
+<div id="banner">
+  <div class="row">
+    <div class="large-12 columns">
+      <div class="row">
+        <div id="owl-demo" class="owl-carousel">
+          
+          {% for imagen in banner %}
+          <div class="item">
+            <img src="{{ absolute_url(asset(imagen.imagen)) }}">
+            {% if session %}<button class="btn_eliminar_banner" data-id="{{ imagen.id }}">eliminar</button>{% endif %}
+          </div>
+          {% endfor %}
+
+        </div>
+
+        {% if session %}
+          <button type="button" id="btn_editar_banner">Agregar Banner</button>
+          <form id="form_imagen_banner" action="#" method="post" enctype="multipart/form-data">
+            <input type="file" id="file_imagen_banner" name="foto" accept="image/x-png, image/jpeg">
+          </form>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<?php
+
+namespace WebBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Producto
+ *
+ * @ORM\Table(name="producto")
+ * @ORM\Entity
+ */
+class Producto
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titulo", type="string", length=200, nullable=true)
+     */
+    private $titulo;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="integer", nullable=true)
+     */
+    private $activo;
+
+
+}

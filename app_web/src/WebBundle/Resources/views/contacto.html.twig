@@ -1,0 +1,93 @@
+{% extends "WebBundle:Default:body.html.twig" %}
+
+{% block title %}
+Empresa | SISA
+{% endblock %}
+
+{% block content %}
+
+<div class="width-default">
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3 class="txt-azul">Comunicate con nosotros</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        <div id="mapa-contacto">
+          mapa
+        </div>
+      </div>
+    </div>
+
+    <div class="space"></div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-div">
+          <label for="">Nombre</label>
+          <div>
+            <input type="text">
+          </div>
+        </div>
+
+        <div class="form-div">
+          <label for="">Teléfono</label>
+          <div>
+            <input type="text">
+          </div>
+        </div>
+
+        <div class="form-div">
+          <label for="">Correo</label>
+          <div>
+            <input type="text">
+          </div>
+        </div>
+
+        <div class="form-div">
+          <label for="">Mensaje</label>
+          <div>
+            <textarea rows="8"></textarea>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button class="btn-enviar">Enviar</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h3 class="txt-azul">Horario de atención</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Lunes a viernes: <span class="txt-rojo">09:00 a 19:00</span></h3>
+            <h3>Sabado: <span class="txt-rojo">09:00 a 13:00</span></h3>
+            <h3>Domingo y festivos: <span class="txt-rojo">Cerrado</span></h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="space"></div>
+
+  </div>
+
+{% endblock %}
+
+{% block js %}
+
+<script src="http://maps.google.com/maps/api/js?key=AIzaSyCc6uZiwgDirdfZgc4W41fR5MDs3H02wpk"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.21/gmaps.min.js"></script>
+
+<script src="{{ absolute_url(asset('js/contacto.js')) }}"></script>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+<?php
+
+namespace WebBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * ProductoFoto
+ *
+ * @ORM\Table(name="producto_foto", indexes={@ORM\Index(name="producto", columns={"producto"})})
+ * @ORM\Entity
+ */
+class ProductoFoto
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="foto", type="string", length=100, nullable=true)
+     */
+    private $foto;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="activo", type="integer", nullable=true)
+     */
+    private $activo;
+
+    /**
+     * @var \Producto
+     *
+     * @ORM\ManyToOne(targetEntity="Producto")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="producto", referencedColumnName="id")
+     * })
+     */
+    private $producto;
+
+
+}

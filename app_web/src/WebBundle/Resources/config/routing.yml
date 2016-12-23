@@ -1,0 +1,80 @@
+web_inicio:
+    path:     /
+    defaults: { _controller: WebBundle:Inicio:inicio }
+
+web_empresa:
+    path:     /empresa/
+    defaults: { _controller: WebBundle:Empresa:empresa }
+
+web_servicios:
+    path:     /servicios/
+    defaults: { _controller: WebBundle:Servicios:servicios }
+
+web_galeria:
+    path:     /galeria/
+    defaults: { _controller: WebBundle:Galeria:galeria }
+
+web_contacto:
+    path:     /contacto/
+    defaults: { _controller: WebBundle:Contacto:contacto }
+
+web_login:
+    path:     /admin/
+    defaults: { _controller: WebBundle:Login:login }
+
+web_login_check:
+    path:     /admin/check/
+    defaults: { _controller: WebBundle:Login:loginCheck }
+
+web_logout:
+    path:     /admin/logout/
+    defaults: { _controller: WebBundle:Login:logout }
+
+# FUNCIONE AJAX
+ajax_guardar_servicio:
+    path:     /admin/guardar-servicio/
+    defaults: { _controller: WebBundle:Servicios:guardarServicio }
+    options:
+        expose: true
+
+ajax_eliminar_servicio:
+    path:     /admin/eliminar-servicio/
+    defaults: { _controller: WebBundle:Servicios:eliminarServicio }
+    options:
+        expose: true
+
+ajax_subir_imagen_galeria:
+    path:     /admin/subir-imagen-galeria/
+    defaults: { _controller: WebBundle:Galeria:subirImagen }
+    options:
+        expose: true
+
+ajax_guardar_texto:
+    path:     /admin/guardar-texto/
+    defaults: { _controller: WebBundle:Admin:guardarTexto }
+    options:
+        expose: true
+
+ajax_guardar_imagen:
+    path:     /admin/guardar-imagen/
+    defaults: { _controller: WebBundle:Admin:guardarImagen }
+    options:
+        expose: true
+
+ajax_guardar_fila_seccion:
+    path:     /admin/guardar-fila-seccion/
+    defaults: { _controller: WebBundle:Admin:guardarFilaSeccion }
+    options:
+        expose: true
+
+ajax_guardar_imagen_banner:
+    path:     /admin/guardar-imagen-banner/
+    defaults: { _controller: WebBundle:Admin:guardarImagenBanner }
+    options:
+        expose: true
+
+ajax_eliminar_imagen_banner:
+    path:     /admin/eliminar-imagen-banner/
+    defaults: { _controller: WebBundle:Admin:eliminarImagenBanner }
+    options:
+        expose: true
