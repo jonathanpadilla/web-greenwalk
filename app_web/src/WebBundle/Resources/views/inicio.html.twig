@@ -22,6 +22,18 @@
 
     <div id="wrapper">
 
+    <span class="boton-menu">=</span>
+    <nav class="menu">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#recicla">Recicla</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
       <div id="inicio"></div>
 
       <div class="section-full sticky">
@@ -66,7 +78,11 @@
         </div>
       </div>
 
-      <div id="space-header"></div>
+      <div id="space-header text-center">
+        <div id="head_movil">
+          <img src="{{ absolute_url(asset('image/logo-greenwalk.png')) }}" alt="logo greenwalk">
+        </div>
+      </div>
 
       <div class="section-full">
         <div id="banner">
@@ -1132,46 +1148,48 @@
 
       <div class="section-full">
         <div class="section-primary">
-          <div class="row">
-            <div class="col-md-4 text-right">
-              <h3 class="c-darkgreen">NOMBRE</h3>
+          <form id="form_contacto" action="#" method="post">
+            <div class="row">
+              <div class="col-md-4 text-right">
+                <h3 class="c-darkgreen">NOMBRE</h3>
+              </div>
+              <div class="col-md-8">
+                <input class="txt" name="nombre" type="text">
+              </div>
             </div>
-            <div class="col-md-8">
-              <input class="txt" type="text">
+            <div class="row">
+              <div class="col-md-4 text-right">
+                <h3 class="c-darkgreen">CORREO</h3>
+              </div>
+              <div class="col-md-8">
+                <input class="txt" name="correo" type="text">
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 text-right">
-              <h3 class="c-darkgreen">CORREO</h3>
+            <div class="row">
+              <div class="col-md-4 text-right">
+                <h3 class="c-darkgreen">TELÉFONO</h3>
+              </div>
+              <div class="col-md-8">
+                <input class="txt" name="telefono" type="text">
+              </div>
             </div>
-            <div class="col-md-8">
-              <input class="txt" type="text">
+            <!-- <div class="row">
+              <div class="col-md-4 text-right">
+                <h3 class="c-darkgreen">ASUNTO</h3>
+              </div>
+              <div class="col-md-8">
+                <input class="txt" type="text">
+              </div>
+            </div> -->
+            <div class="row">
+              <div class="col-md-4 text-right">
+                <h3 class="c-darkgreen">MENSAJE</h3>
+              </div>
+              <div class="col-md-8">
+                <textarea class="txtarea" name="mensaje" id="" rows="10"></textarea>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 text-right">
-              <h3 class="c-darkgreen">TELÉFONO</h3>
-            </div>
-            <div class="col-md-8">
-              <input class="txt" type="text">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 text-right">
-              <h3 class="c-darkgreen">ASUNTO</h3>
-            </div>
-            <div class="col-md-8">
-              <input class="txt" type="text">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4 text-right">
-              <h3 class="c-darkgreen">MENSAJE</h3>
-            </div>
-            <div class="col-md-8">
-              <textarea class="txtarea" id="" rows="10"></textarea>
-            </div>
-          </div>
+          </form>
           <div class="row">
             <div class="col-md-12 text-right">
               <a href="#" id="btn_enviar">ENVIAR</a>
@@ -1186,14 +1204,14 @@
         <div class="section-primary">
           <div id="footer">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-md-4 text-center">
 
                 <div>
                   <img src="{{ absolute_url(asset('image/logo-footer.png')) }}" alt="">
                 </div>
 
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 text-center">
 
                 <div id="social-footer">
                   <ul>
@@ -1203,7 +1221,7 @@
                 </div>
 
               </div>
-              <div class="col-md-5">
+              <div class="col-md-5 text-center">
 
                 <div id="contacto-footer">
                   <ul>

@@ -45,43 +45,8 @@ ajax_eliminar_producto:
     options:
         expose: true
 
-
-
-
-
-
-# ajax_subir_imagen_galeria:
-#     path:     /admin/subir-imagen-galeria/
-#     defaults: { _controller: WebBundle:Galeria:subirImagen }
-#     options:
-#         expose: true
-
-# ajax_guardar_texto:
-#     path:     /admin/guardar-texto/
-#     defaults: { _controller: WebBundle:Admin:guardarTexto }
-#     options:
-#         expose: true
-
-# ajax_guardar_imagen:
-#     path:     /admin/guardar-imagen/
-#     defaults: { _controller: WebBundle:Admin:guardarImagen }
-#     options:
-#         expose: true
-
-# ajax_guardar_fila_seccion:
-#     path:     /admin/guardar-fila-seccion/
-#     defaults: { _controller: WebBundle:Admin:guardarFilaSeccion }
-#     options:
-#         expose: true
-
-# ajax_guardar_imagen_banner:
-#     path:     /admin/guardar-imagen-banner/
-#     defaults: { _controller: WebBundle:Admin:guardarImagenBanner }
-#     options:
-#         expose: true
-
-# ajax_eliminar_imagen_banner:
-#     path:     /admin/eliminar-imagen-banner/
-#     defaults: { _controller: WebBundle:Admin:eliminarImagenBanner }
-#     options:
-#         expose: true
+ajax_enviar_contacto:
+    path:     /enviar-contacto/
+    defaults: { _controller: WebBundle:Inicio:enviarContacto }
+    options:
+        expose: true
