@@ -100,4 +100,146 @@ $(function(){
             title: "GreenWalk"
         });
 
+    $("#btn_adinistrar_servicio").on('click', function(){
+		$("#modal_servicios").modal('show');
+    });
+
+    $("#guardar_form_servicio").on('click', function(){
+
+    	var form_servicios = $("#form_servicios");
+
+		form_servicios.validate({
+            rules: {
+
+                titulo: {
+					required: true
+				},
+                descripcion: {
+                    required: true
+                }
+            },
+            messages: {
+
+                titulo: {
+                    required: 'Campo requerido',
+                },
+                descripcion: {
+                    required: 'Campo requerido',
+                }
+            },
+            errorPlacement: function(error, element) {
+                if (element.is(":radio") || element.is(":checkbox")) {
+                    element.closest('.option-group').after(error);
+                }
+                else {
+                    error.insertAfter(element);
+                }
+            }
+        });
+
+        if (form_servicios.valid(true)) {
+
+			var datos = new FormData( form_servicios[0] );
+
+			$.ajax({
+				url: Routing.generate('ajax_guardar_servicio'),
+				data: datos,
+				dataType: 'json',
+				method: 'post',
+				contentType:false,
+				processData:false,
+				cache:false
+			}).done(function(json){
+				if(json.result)
+				{
+					location.reload(true);
+				}
+			});
+		}
+
+	});
+
+	$("#btn_agregar_producto").on('click', function(){
+		var texto = $("#input_titulo_producto").val();
+
+		if(texto != '')
+		{
+			$.ajax({
+				url: Routing.generate('ajax_guardar_producto'),
+				data: {texto: texto},
+				dataType: 'json',
+				method: 'post'
+			}).done(function(json){
+				if(json.result)
+				{
+					location.reload(true);
+				}
+			});
+		}
+	});
+
+	$(".btn_eliminar_servicio").on('click', function(e){
+		e.preventDefault();
+
+		var btn = $(this);
+		var id = btn.data('id');
+
+		$.ajax({
+			url: Routing.generate('ajax_eliminar_servicio'),
+			data: {id: id},
+			dataType: 'json',
+			method: 'post'
+		}).done(function(json){
+			if(json.result)
+			{
+				location.reload(true);
+			}
+		});
+	});
+
+	$(".input_foto_producto").change(function(){
+		var btn = $(this);
+		var id = btn.data('id');
+		var form = btn.parent();
+
+		var datos = new FormData( form[0] );
+		datos.append('id', id);
+
+		$.ajax({
+			url: Routing.generate('ajax_guardar_foto_producto'),
+			data: datos,
+			dataType: 'json',
+			method: 'post',
+			contentType:false,
+			processData:false,
+			cache:false
+		}).done(function(json){
+			if(json.result)
+			{
+				location.reload(true);
+			}
+		});
+
+	});
+
+	$(".btn_eliminar_producto").on('click', function(e){
+		e.preventDefault();
+
+		var btn = $(this);
+		var id = btn.data('id');
+
+		$.ajax({
+			url: Routing.generate('ajax_eliminar_producto'),
+			data: {id: id},
+			dataType: 'json',
+			method: 'post'
+		}).done(function(json){
+			if(json.result)
+			{
+				location.reload(true);
+			}
+		});
+
+	});
+
 });
