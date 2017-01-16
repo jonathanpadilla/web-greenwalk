@@ -14,6 +14,11 @@
     src: url(../fonts/OgiremaItalic.ttf);
 }
 
+@font-face {
+    font-family: MyriadProBold;
+    src: url(../fonts/MyriadPro-Bold.otf);
+}
+
 #wrapper, body, #section-full{
 	width:100%;
 	margin: 0;
@@ -33,7 +38,7 @@
 }
 
 h1, h2, h3, h4, h5, h6, span, p, li{
-	font-family: OgiremaBold;
+	font-family: MyriadProBold;
 }
 
 p{
@@ -135,6 +140,10 @@ h5{
 
 .c-darkgreen{
 	color: #4a8032;
+}
+
+.c-darkgreen2{
+	color: #5fa243;
 }
 
 .c-white{
@@ -436,10 +445,9 @@ h5{
 }
 
 .npanel-head{
-	background-color: #93bc22;
-	color: #fff;
+	/*background-color: #93bc22;
+	color: #fff;*/
 	margin-bottom:10px;
-	padding:0 0 0 20px;
 	overflow:hidden;
 }
 
@@ -771,4 +779,20 @@ border-radius: 50%;
 .nosotros-texto-right{
 	max-width: 430px;
     float: right;
+}
+
+.item-productos{
+	margin-bottom: 40px;
+}
+
+.item-productos img{
+	position: absolute;
+    z-index: -1;
+    top: 0;
+}
+
+.item-productos h3{
+	z-index: 100;
+    margin: 20px;
+    color: #fff;
 }
