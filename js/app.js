@@ -100,6 +100,30 @@ $(function(){
             title: "GreenWalk"
         });
 
+        map2.addMarker({
+            lat: -37.4712325,
+            lng: -72.3234743,
+            title: "GreenWalk"
+        });
+
+        map2.addMarker({
+            lat: -37.4752325,
+            lng: -72.3494743,
+            title: "GreenWalk"
+        });
+
+        map2.addMarker({
+            lat: -37.4742325,
+            lng: -72.3414743,
+            title: "GreenWalk"
+        });
+
+        map2.addMarker({
+            lat: -37.4762325,
+            lng: -72.3214743,
+            title: "GreenWalk"
+        });
+
     $("#btn_adinistrar_servicio").on('click', function(){
 		$("#modal_servicios").modal('show');
     });

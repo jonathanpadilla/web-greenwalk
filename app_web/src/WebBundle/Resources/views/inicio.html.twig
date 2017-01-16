@@ -90,7 +90,7 @@
 
       <div class="section-full">
         <div class="section-primary text-center">
-          <div>
+          <div class="width-full-sm">
             <img src="{{ absolute_url(asset('image/imagen_head.png')) }}" alt="">
           </div>
         </div>
@@ -193,18 +193,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="section-full">
-        <div class="section-primary">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <div class="titulo" style="background-image: url('{{ absolute_url(asset('image/fondo-titulo.png')) }}')">
-                <h2>NOSOTROS</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
       
       <div id="nosotros"></div>
       <div class="space-100"></div>
@@ -324,7 +312,7 @@
       <div class="section-full">
         <div class="section-primary">
           <div class="row">
-            <div class="col-md-2">
+            <div class="col-xs-2 hidden-sm hidden-xs">
               <img src="{{ absolute_url(asset('image/recicla-vertical.png')) }}" alt="">
             </div>
             <div class="col-md-9">
@@ -353,31 +341,26 @@
                 <div class="col-md-12">
                   <div class="item-productos">
                     <img src="{{ absolute_url(asset('image/producto1.png')) }}" alt="">
-                    <h3>Papeles y cartones</h3>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="item-productos">
                     <img src="{{ absolute_url(asset('image/producto2.png')) }}" alt="">
-                    <h3>Plasticos y pet</h3>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="item-productos">
                     <img src="{{ absolute_url(asset('image/producto3.png')) }}" alt="">
-                    <h3>Latas y metales</h3>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="item-productos">
                     <img src="{{ absolute_url(asset('image/producto4.png')) }}" alt="">
-                    <h3>Vidrios</h3>
                   </div>
                 </div>
                 <div class="col-md-12">
                   <div class="item-productos">
                     <img src="{{ absolute_url(asset('image/producto5.png')) }}" alt="">
-                    <h3>Cartón para bebidas</h3>
                   </div>
                 </div>
               </div>
@@ -385,7 +368,7 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 text-center-sm">
                       <h2 class="c-darkgreen2">Tienda sustentable</h2>
                     </div>
                   </div>
@@ -394,36 +377,19 @@
 
               <div class="row">
                 <div class="col-md-12">
-                  <div>
+                  <div class="text-center width-full-sm">
                     <img src="{{ absolute_url(asset('image/imagen_middle.png')) }}" alt="">
                   </div>
                 </div>
               </div>
 
-              <div class="space-50"></div>
-
-              <div class="row">
-                <div class="col-md-12">
-                  <div>
-                    <p class="c-darkgreen2">La tienda tiene como finalidad poder ofrecer a la comunidad diferentes productos sustentables y que la gente pueda observar que ellos son producto del reciclaje ; también interiorizarse del compostaje y poder ver en directo arboles nativos de la región.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-12">
-                  <h2 class="c-darkgreen2">¿Qué reciclar?</h2>
-                </div>
-              </div>
-
-
             </div>
-            <div class="col-md-1 text-right">
+            <div class="col-md-1 text-right hidden-sm hidden-xs">
               <div>
                 <img src="{{ absolute_url(asset('image/vertical-colores.png')) }}" alt="">
               </div>
               <div>
-                <img src="{{ absolute_url(asset('image/vertical-colores.png')) }}" alt="">
+                <img src="{{ absolute_url(asset('image/vertical-colores2.png')) }}" alt="">
               </div>
             </div>
           </div>
@@ -433,230 +399,89 @@
       <div class="section-full">
         <div class="section-primary">
           <div class="row">
-            <div class="col-md-2">
-            </div>
-            <div class="col-md-9">
+            <div class="col-sm-2 col-xs-4">
 
               <div class="row">
-            <div class="col-md-6">
-              <div class="npanel">
-                <div class="npanel-head">
-                  <div>
-                    <img src="{{ absolute_url(asset('image/reciclar1.png')) }}" alt="">
-                  </div>
-                </div>
-                <div class="npanel-content">
-                  <div class="row">
-                    <div class="col-md-5">
-                      <h4>INCLUIR</h4>
-                      <ul class="lista-recicla">
-                        <li>- Botellas de vidrio vacías</li>
-                        <li>- Refrescos</li>
-                        <li>- Jugo</li>
-                        <li>- Cerveza</li>
-                        <li>- Vinos y Licores</li>
-                        <li>- Envases de alimento</li>
-                        <li>- Mermelada</li>
-                        <li>- Mayonesa</li>
-                        <li>- Cafe</li>
-                        <li>- Aceite</li>
-                      </ul>
-                    </div>
-                    <div class="col-md-5">
-                      <h4>EVITAR</h4>
-                      <ul class="lista-recicla">
-                        <li>- Cerámica y espejos</li>
-                        <li>- Cristales</li>
-                        <li>- Cristal plano</li>
-                        <li>- Cristales automotrices</li>
-                        <li>- Foco o ampolletas</li>
-                      </ul>
-                    </div>
-                  </div>
+                <div class="col-md-12" style="padding: 0;">
+                  <ul class="lista-productos-2">
+                    {% set visible = 1 %}
+                    {% for producto in productos %}
+                    <li><a href="#" class="item-producto {{ visible == 1 ? 'producto-seleccionado' }}" data-id="{{ producto.id }}">- {{ producto.titulo }}</a>
+                      {% if session %}
+                      <a href="#" style="color:red;font-size:15px;" class="btn_eliminar_producto" data-id="{{ producto.id }}">Eliminar</a>
+                      <form action="#" method="post" enctype="multipart/form-data">
+                        <label for="">Agregar foto</label>
+                        <input type="file" name="foto" data-id="{{ producto.id }}" class="input_foto_producto">
+                      </form>
+                      {% endif %}
+                    </li>
+                    {% set visible = 0 %}
+                    {% endfor %}
+                  </ul>
                 </div>
               </div>
+
             </div>
-            <div class="col-md-6">
-              <div class="npanel">
-                <div class="npanel-head">
-                  <div>
-                    <img src="{{ absolute_url(asset('image/reciclar2.png')) }}" alt="">
-                  </div>
-                </div>
-                <div class="npanel-content">
-                  <div class="row">
-                    <div class="col-md-5">
-                      <h4>INCLUIR</h4>
-                      <ul class="lista-recicla">
-                        <li>- Botellas de vidrio vacías</li>
-                        <li>- Refrescos</li>
-                        <li>- Jugo</li>
-                        <li>- Cerveza</li>
-                        <li>- Vinos y Licores</li>
-                        <li>- Envases de alimento</li>
-                        <li>- Mermelada</li>
-                        <li>- Mayonesa</li>
-                        <li>- Cafe</li>
-                        <li>- Aceite</li>
-                      </ul>
-                    </div>
-                    <div class="col-md-5">
-                      <h4>EVITAR</h4>
-                      <ul class="lista-recicla">
-                        <li>- Cerámica y espejos</li>
-                        <li>- Cristales</li>
-                        <li>- Cristal plano</li>
-                        <li>- Cristales automotrices</li>
-                        <li>- Foco o ampolletas</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="npanel">
-                <div class="npanel-head">
-                  <div>
-                    <img src="{{ absolute_url(asset('image/reciclar3.png')) }}" alt="">
-                  </div>
-                </div>
-                <div class="npanel-content">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <h4>INCLUIR</h4>
-                      <ul class="lista-recicla">
-                        <li>- Botellas de vidrio vacías</li>
-                        <li>- Refrescos</li>
-                        <li>- Jugo</li>
-                        <li>- Cerveza</li>
-                        <li>- Vinos y Licores</li>
-                        <li>- Envases de alimento</li>
-                        <li>- Mermelada</li>
-                        <li>- Mayonesa</li>
-                        <li>- Cafe</li>
-                        <li>- Aceite</li>
-                      </ul>
-                    </div>
-                    <div class="col-md-6">
-                      <h4>EVITAR</h4>
-                      <ul class="lista-recicla">
-                        <li>- Cerámica y espejos</li>
-                        <li>- Cristales</li>
-                        <li>- Cristal plano</li>
-                        <li>- Cristales automotrices</li>
-                        <li>- Foco o ampolletas</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="npanel">
-                <div class="npanel-head">
-                  <div>
-                    <img src="{{ absolute_url(asset('image/reciclar4.png')) }}" alt="">
-                  </div>
-                </div>
-                <div class="npanel-content">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <h4>INCLUIR</h4>
-                      <ul class="lista-recicla">
-                        <li>- Botellas de vidrio vacías</li>
-                        <li>- Refrescos</li>
-                        <li>- Jugo</li>
-                        <li>- Cerveza</li>
-                        <li>- Vinos y Licores</li>
-                        <li>- Envases de alimento</li>
-                        <li>- Mermelada</li>
-                        <li>- Mayonesa</li>
-                        <li>- Cafe</li>
-                        <li>- Aceite</li>
-                      </ul>
-                    </div>
-                    <div class="col-md-6">
-                      <h4>EVITAR</h4>
-                      <ul class="lista-recicla">
-                        <li>- Cerámica y espejos</li>
-                        <li>- Cristales</li>
-                        <li>- Cristal plano</li>
-                        <li>- Cristales automotrices</li>
-                        <li>- Foco o ampolletas</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            <div class="col-sm-9 col-xs-8">
               
+              {% if session %}
+              <div class="row">
+                <div class="col-md-12 text-right">
+                  <input id="input_titulo_producto" type="text" style="width: 500px;">
+                  <button id="btn_agregar_producto" class="btn btn-success">Agregar</button>
+                  <div class="space-20"></div>
+                </div>
+              </div>
+              {% endif %}
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="parrafo-1">
+                    <p class="c-darkgreen2">La tienda tiene como finalidad poder ofrecer a la comunidad diferentes productos sustentables y que la gente pueda observar que ellos son producto del reciclaje ; también interiorizarse del compostaje y poder ver en directo arboles nativos de la región.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    {% set visible = 1 %}
+                    {% for key, value in lista_fotos %}
+                    <div class="fotos-producto fotos-producto-{{ key }} {{ visible == 1 ? 'mostrar' }}">
+
+                      {% for foto in value %}
+
+                      <div class="col-md-4 col-sm-6 col-xs-12 text-center">
+                        <div class="foto-nosotros">
+                          <img src="{{ absolute_url(asset('image/uploads/'~foto)) }}" alt="" style="width:100%">
+                          {% if session %}
+                          <!-- <a href="#" style="color:red;" class="btn_eliminar_foto_producto" data-id="{{ key }}">Eliminar</a> -->
+                          {% endif %}
+                        </div>
+                      </div>
+                      {% endfor %}
+                    </div>
+                    {% set visible = 0 %}
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+
+
             </div>
-            <div class="col-md-1 text-right">
+            <div class="col-md-1 text-right hidden-sm hidden-xs">
               <div>
                 <img src="{{ absolute_url(asset('image/vertical-colores.png')) }}" alt="">
-              </div>
-              <div>
-                <img src="{{ absolute_url(asset('image/vertical-colores3.png')) }}" alt="">
               </div>
             </div>
           </div>
         </div>
       </div>
 
-          {% if session %}
-          <div class="col-md-12 text-right">
-            <input id="input_titulo_producto" type="text" style="width: 500px;">
-            <button id="btn_agregar_producto" class="btn btn-success">Agregar</button>
-            <div class="space-20"></div>
-          </div>
-          {% endif %}
+      <div class="space-50"></div>
 
-          <div class="space-50"></div>
-          <div class="row">
-            <div class="col-md-5">
-              <ul class="lista-productos-2">
-                {% set visible = 1 %}
-                {% for producto in productos %}
-                <li><a href="#" class="item-producto {{ visible == 1 ? 'producto-seleccionado' }}" data-id="{{ producto.id }}">- {{ producto.titulo }}</a>
-                  {% if session %}
-                  <a href="#" style="color:red;font-size:15px;" class="btn_eliminar_producto" data-id="{{ producto.id }}">Eliminar</a>
-                  <form action="#" method="post" enctype="multipart/form-data">
-                    <label for="">Agregar foto</label>
-                    <input type="file" name="foto" data-id="{{ producto.id }}" class="input_foto_producto">
-                  </form>
-                  {% endif %}
-                </li>
-                {% set visible = 0 %}
-                {% endfor %}
-              </ul>
-            </div>
-            <div class="col-md-7">
-              <div class="row">
-                {% set visible = 1 %}
-                {% for key, value in lista_fotos %}
-                <div class="fotos-producto fotos-producto-{{ key }} {{ visible == 1 ? 'mostrar' }}">
-
-                  {% for foto in value %}
-
-                  <div class="col-md-6 text-center">
-                    <div class="foto-nosotros">
-                      <img src="{{ absolute_url(asset('image/uploads/'~foto)) }}" alt="" style="width:100%">
-                      {% if session %}
-                      <!-- <a href="#" style="color:red;" class="btn_eliminar_foto_producto" data-id="{{ key }}">Eliminar</a> -->
-                      {% endif %}
-                    </div>
-                  </div>
-                  {% endfor %}
-                </div>
-                {% set visible = 0 %}
-                {% endfor %}
-              </div>
-            </div>
-          </div>
+      <div class="section-full">
+        <div id="mapa-2">
         </div>
       </div>
 
@@ -665,6 +490,11 @@
 
       <div class="section-full">
         <div class="section-primary">
+          <div class="row">
+            <div class="col-md-12 text-center-sm">
+              <h2 class="c-darkgreen2">Servicios</h2>
+            </div>
+          </div>
 
           <div class="space-35"></div>
 
@@ -714,7 +544,193 @@
         </div>
       </div>
 
-      <div class="space-35"></div>
+      <div id="recicla"></div>
+      <div class="space-100"></div>
+
+      <div class="section-full">
+        <div class="section-primary">
+          <div class="row">
+            <div class="col-md-2 hidden-sm hidden-xs">
+              <img src="{{ absolute_url(asset('image/recicla-vertical.png')) }}" alt="">
+            </div>
+            <div class="col-md-9">
+              <div class="row">
+                <div class="col-md-12">
+                  <h2 class="c-darkgreen2">¿Qué reciclar?</h2>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="npanel">
+                    <div class="npanel-head">
+                      <div>
+                        <img src="{{ absolute_url(asset('image/reciclar1.png')) }}" alt="">
+                      </div>
+                    </div>
+                    <div class="npanel-content">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h4>INCLUIR</h4>
+                          <ul class="lista-recicla">
+                            <li>- Botellas de vidrio vacías</li>
+                            <li>- Refrescos</li>
+                            <li>- Jugo</li>
+                            <li>- Cerveza</li>
+                            <li>- Vinos y Licores</li>
+                            <li>- Envases de alimento</li>
+                            <li>- Mermelada</li>
+                            <li>- Mayonesa</li>
+                            <li>- Cafe</li>
+                            <li>- Aceite</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-5">
+                          <h4>EVITAR</h4>
+                          <ul class="lista-recicla">
+                            <li>- Cerámica y espejos</li>
+                            <li>- Cristales</li>
+                            <li>- Cristal plano</li>
+                            <li>- Cristales automotrices</li>
+                            <li>- Foco o ampolletas</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="npanel">
+                    <div class="npanel-head">
+                      <div>
+                        <img src="{{ absolute_url(asset('image/reciclar2.png')) }}" alt="">
+                      </div>
+                    </div>
+                    <div class="npanel-content">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h4>INCLUIR</h4>
+                          <ul class="lista-recicla">
+                            <li>- Botellas de vidrio vacías</li>
+                            <li>- Refrescos</li>
+                            <li>- Jugo</li>
+                            <li>- Cerveza</li>
+                            <li>- Vinos y Licores</li>
+                            <li>- Envases de alimento</li>
+                            <li>- Mermelada</li>
+                            <li>- Mayonesa</li>
+                            <li>- Cafe</li>
+                            <li>- Aceite</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-5">
+                          <h4>EVITAR</h4>
+                          <ul class="lista-recicla">
+                            <li>- Cerámica y espejos</li>
+                            <li>- Cristales</li>
+                            <li>- Cristal plano</li>
+                            <li>- Cristales automotrices</li>
+                            <li>- Foco o ampolletas</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="npanel">
+                    <div class="npanel-head">
+                      <div>
+                        <img src="{{ absolute_url(asset('image/reciclar3.png')) }}" alt="">
+                      </div>
+                    </div>
+                    <div class="npanel-content">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h4>INCLUIR</h4>
+                          <ul class="lista-recicla">
+                            <li>- Botellas de vidrio vacías</li>
+                            <li>- Refrescos</li>
+                            <li>- Jugo</li>
+                            <li>- Cerveza</li>
+                            <li>- Vinos y Licores</li>
+                            <li>- Envases de alimento</li>
+                            <li>- Mermelada</li>
+                            <li>- Mayonesa</li>
+                            <li>- Cafe</li>
+                            <li>- Aceite</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6">
+                          <h4>EVITAR</h4>
+                          <ul class="lista-recicla">
+                            <li>- Cerámica y espejos</li>
+                            <li>- Cristales</li>
+                            <li>- Cristal plano</li>
+                            <li>- Cristales automotrices</li>
+                            <li>- Foco o ampolletas</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="npanel">
+                    <div class="npanel-head">
+                      <div>
+                        <img src="{{ absolute_url(asset('image/reciclar4.png')) }}" alt="">
+                      </div>
+                    </div>
+                    <div class="npanel-content">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h4>INCLUIR</h4>
+                          <ul class="lista-recicla">
+                            <li>- Botellas de vidrio vacías</li>
+                            <li>- Refrescos</li>
+                            <li>- Jugo</li>
+                            <li>- Cerveza</li>
+                            <li>- Vinos y Licores</li>
+                            <li>- Envases de alimento</li>
+                            <li>- Mermelada</li>
+                            <li>- Mayonesa</li>
+                            <li>- Cafe</li>
+                            <li>- Aceite</li>
+                          </ul>
+                        </div>
+                        <div class="col-md-6">
+                          <h4>EVITAR</h4>
+                          <ul class="lista-recicla">
+                            <li>- Cerámica y espejos</li>
+                            <li>- Cristales</li>
+                            <li>- Cristal plano</li>
+                            <li>- Cristales automotrices</li>
+                            <li>- Foco o ampolletas</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-md-1 text-right hidden-sm hidden-xs">
+              <div>
+                <img src="{{ absolute_url(asset('image/vertical-colores.png')) }}" alt="">
+              </div>
+              <div>
+                <img src="{{ absolute_url(asset('image/vertical-colores3.png')) }}" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-100"></div>
 
       <div class="section-full">
         <div id="mapa">
